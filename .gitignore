@@ -1,0 +1,13 @@
+prog
+main.o
+functions.o
+CVectorHori.o
+CVectorVert.o
+CVector.o
+CMakeLists.txt.user
+prog
+out1.txt
+fileout.txt
+FabricVectVert.o
+FabricVectHori.o
+settings.json
