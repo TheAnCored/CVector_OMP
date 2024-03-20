@@ -61,7 +61,7 @@ CVectorHori operator+(const CVector& first, const CVector& second){
         if(length1 != length2){ throw "НЕравная длина векторов!\n"; }
         
         #pragma omp parallel for
-        for(int i=0; i<length1; ++i){
+        for(long long int i=0; i<length1; ++i){
             tmp_vector[i] = tmp_vec1[i] + tmp_vec2[i];
         }
     }catch(const char* error_message){ std::cout<<error_message<<std::endl; }
@@ -85,7 +85,7 @@ CVectorHori operator-(const CVector& first, const CVector& second){
         if(length1 != length2){ throw "НЕравная длина векторов!\n"; }
 
         #pragma omp parallel for
-        for(int i=0; i<length1; ++i){
+        for(long long int i=0; i<length1; ++i){
             tmp_vector[i] = tmp_vec1[i] - tmp_vec2[i];
         }
     }catch(const char* error_message){ std::cout<<error_message<<std::endl; }

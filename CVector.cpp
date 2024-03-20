@@ -74,7 +74,7 @@ double CVector::operator*(const CVector& second) const&{
         
         // Параллелим for на скалярном сложении
         #pragma omp parallel for reduction(+: dot_product)
-        for(int i=0; i<second.get_length(); ++i){ dot_product+= this->vector[i]*second.vector[i]; }
+        for(long long int i=0; i<second.get_length(); ++i){ dot_product+= this->vector[i]*second.vector[i]; }
     }
     catch(const char* error_message){ std::cout<<error_message<<std::endl;}
 
@@ -104,7 +104,7 @@ int CVector::get_filename_length()const{
 std::vector<double> CVector::get_vector()const{
     std::vector<double> vect_copy(this->get_length());
 
-    for(size_t i=0;i<this->get_length(); ++i){ vect_copy[i]=this->vector[i];}
+    for(long long i=0;i<this->get_length(); ++i){ vect_copy[i]=this->vector[i];}
     return vect_copy;
 }
 

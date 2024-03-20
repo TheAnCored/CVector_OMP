@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(VectorHoriVert)
+set(VEC_SRC *.cpp)
+set(VEC_HDR *.hpp)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp/openmp")
+add_executable(${PROJECT_NAME} ${VEC_SRC} ${VEC_HDR})
