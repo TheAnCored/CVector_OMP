@@ -40,6 +40,7 @@ std::vector<std::shared_ptr<CVector>> reading_from_file(std::string filename, st
     return vectors;
 }
 
+
 CVectorHori addition(CVectorHori first, CVectorHori second){
     std::vector<double> add(0, first.get_length());
 
@@ -50,11 +51,29 @@ CVectorHori addition(CVectorHori first, CVectorHori second){
     return CVectorHori(add);
 }
 
+CVectorHori subtraction(CVectorHori first, CVectorHori second){
+    std::vector<double> sub(first.get_length(),0);
+
+    for(int i=0; i<first.get_length(); i++){
+        sub[i] = first[i]-second[i];
+    }
+    return CVectorHori(sub);
+}
+
 CVectorVert addition(CVectorVert first, CVectorVert second){
     std::vector<double> add(first.get_length(),0);
 
     for(int i=0; i<first.get_length(); i++){
         add[i] = first[i]+second[i];
     }
-    return CVectorHori(add);
+    return CVectorVert(add);
+}
+
+CVectorVert subtraction(CVectorVert first, CVectorVert second){
+    std::vector<double> sub(first.get_length(),0);
+
+    for(int i=0; i<first.get_length(); i++){
+        sub[i] = first[i]-second[i];
+    }
+    return CVectorVert(sub);
 }

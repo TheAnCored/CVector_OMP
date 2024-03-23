@@ -14,7 +14,7 @@ void CVectorVert::output(){
 
     if(this->get_filename_length() > 0){
         out.open(this->filename, std::ios::app);
-        for(size_t i=0;i<this->get_length(); ++i){ out<<this->vector[i]<<'\n';}
+        for(long int i=0;i<this->get_length(); ++i){ out<<this->vector[i]<<'\n';}
         out.close();
     }
 }

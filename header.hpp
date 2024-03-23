@@ -16,4 +16,7 @@
 std::vector<std::shared_ptr<CVector>> reading_from_file(std::string, std::map<std::string, std::unique_ptr<Fabric>>&);
 
 CVectorHori addition(CVectorHori, CVectorHori);
+CVectorHori subtraction(CVectorHori, CVectorHori);
+
 CVectorVert addition(CVectorVert, CVectorVert);
+CVectorVert subtraction(CVectorVert, CVectorVert);

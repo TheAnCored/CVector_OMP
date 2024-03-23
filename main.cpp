@@ -26,23 +26,23 @@ int main(){
 
         //for(size_t i=0; i<6;++i){ tmp1[i]=1;tmp2[i]=2; }
 
-        CVectorVert a = CVectorVert(tmp1);
-        CVectorVert b = CVectorVert(tmp2);
+        CVectorHori a = CVectorHori(tmp1);
+        CVectorHori b = CVectorHori(tmp2);
 
-        CVectorVert c;
+        CVectorHori c;
         
         auto start_time = std::chrono::high_resolution_clock::now(); 
-        c = a+b;
+        c = a-b;
         auto end_time = std::chrono::high_resolution_clock::now(); 
 
-        std::chrono::duration<double> serial_duration = end_time-start_time;
+        std::chrono::duration<double> parallel_duration = end_time-start_time;
 
-        CVectorVert d;
+        CVectorHori d;
 
         start_time = std::chrono::high_resolution_clock::now();
-        d = addition(a,b);
+        d = subtraction(a,b);
         end_time = std::chrono::high_resolution_clock::now(); 
-        std::chrono::duration<double> parallel_duration = end_time - start_time; 
+        std::chrono::duration<double> serial_duration = end_time - start_time; 
 
         std::cout << "Serial duration: "<< serial_duration.count() << " seconds"<< std::endl; 
         std::cout << "Parallel duration: "<< parallel_duration.count() << " seconds"<< std::endl; 

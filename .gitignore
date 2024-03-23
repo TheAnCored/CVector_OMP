@@ -12,3 +12,6 @@ FabricVectVert.o
 FabricVectHori.o
 settings.json
 .vscode
+CMakeCache.txt
+CMakeFiles
+CMakeLists.txt.user

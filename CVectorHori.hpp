@@ -29,4 +29,4 @@ public:
 
 // Объявление оператора сложения
 CVectorHori operator+(const CVector& first, const CVector& second);
-CVectorHori operator-(const CVector& first, const CVector& second);
+CVectorHori operator-(const CVector& first, const CVector& second); 
