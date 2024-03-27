@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
-project(VectorHoriVert)
+project(CVector_OMP)
 set(VEC_SRC CVector.cpp CVectorHori.cpp CVectorVert.cpp FabricVectHori.cpp FabricVectVert.cpp functions.cpp main.cpp) 
 set(VEC_HDR CVector.hpp CVectorHori.hpp CVectorVert.hpp FabricVectHori.hpp FabricVectVert.hpp header.hpp)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp ")
 add_executable(${PROJECT_NAME} ${VEC_SRC} ${VEC_HDR})
